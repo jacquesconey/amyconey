@@ -11,6 +11,7 @@ body {
     padding: 0;
     min-height: 100%;
     font-family: "Arial Hebrew", Arial, sans-serif;
+    font-size: 12px;
 }
 
 a {
@@ -72,8 +73,23 @@ footer {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    text-align:left;
+    /*text-align:left;*/
+    display: inline-block;
 }
+
+.links {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    /*text-align: right;*/
+    display: inline-block;
+    float: right;
+}
+
+.links a i {
+    padding: 10px;
+}
+
 /*.global-nav li a:active {*/
     /*border-bottom: 2px solid black;*/
 /*}*/

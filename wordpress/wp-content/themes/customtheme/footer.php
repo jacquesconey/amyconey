@@ -1,6 +1,14 @@
 
 		<footer class="blog-footer">
 		    <p class="copyright">All of the images on the website are subject to Copyright &copy; 2017 Amy Coney</p>
+		    <div class="links">
+		        <a href="https://www.facebook.com/amyconeyart/">
+		            <i class="fa fa-facebook" aria-hidden="true"></i>
+		         </a>
+		        <a href="https://www.instagram.com/amyconeyart/">
+		            <i class="fa fa-instagram" aria-hidden="true"></i>
+		        </a>
+		    </div>
         </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
