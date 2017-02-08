@@ -1,0 +1,79 @@
+/*
+Theme Name: Custom Theme
+Author: Jacques Coney
+Description: Theme for wwww.amyconey.co.uk
+Version: 0.0.1
+Tags: bootstrap
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: "Arial Hebrew", Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    cursor: hand;
+}
+
+header {
+    height: 200px;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+.wrapper {
+    max-width: 70%;
+    margin: auto;
+}
+
+.logo {
+    /*text-align: left;*/
+    display: inline-block;
+}
+
+.global-nav {
+    /*text-align: right;*/
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    float: right;
+}
+
+.global-nav li {
+    display: inline;
+    padding: 10px;
+}
+
+.global-nav li a {
+    padding-bottom: 5px;
+}
+
+
+.global-nav li:hover a {
+    border-bottom: 2px solid black;
+}
+
+footer {
+    height: 200px;
+}
+
+.copyright {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align:left;
+}
+/*.global-nav li a:active {*/
+    /*border-bottom: 2px solid black;*/
+/*}*/
