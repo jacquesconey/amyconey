@@ -28,11 +28,11 @@
                     <!-- <p class="lead blog-description"><?php echo get_bloginfo( 'description' ); ?></p> -->
                 </div>
              </div>
-            <ul class="global-nav">
-                <li><a class="global-nav-item" href="#">artwork</a></li>
-                <li><a class="global-nav-item" href="#">photography</a></li>
-                <li><a class="global-nav-item" href="#">blog</a></li>
-                <li><a class="global-nav-item" href="#">shop</a></li>
-                <li><a class="global-nav-item" href="#">about/contact</a></li>
-            </ul>
+            <nav class="global-nav">
+                <a class="global-nav-item" href="#">artwork</a>
+                <a class="global-nav-item" href="#">photography</a>
+                <a class="global-nav-item" href="#">blog</a>
+                <a class="global-nav-item" href="#">shop</a>
+                <a class="global-nav-item" href="#">about/contact</a>
+            </nav>
         </header>
