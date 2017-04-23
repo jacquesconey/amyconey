@@ -29,10 +29,10 @@
                 </div>
              </div>
             <nav class="global-nav">
-                <a class="global-nav-item" href="#">artwork</a>
-                <a class="global-nav-item" href="#">photography</a>
-                <a class="global-nav-item" href="#">blog</a>
-                <a class="global-nav-item" href="#">shop</a>
-                <a class="global-nav-item" href="#">about/contact</a>
+                <a class="global-nav-item" href="/artwork/">artwork</a>
+                <a class="global-nav-item" href="/photography/">photography</a>
+                <a class="global-nav-item" href="/blog/">blog</a>
+                <a class="global-nav-item" href="/shop/">shop</a>
+                <a class="global-nav-item" href="/contact/">about/contact</a>
             </nav>
         </header>
