@@ -99,8 +99,9 @@ a:hover {
 }
 
 header {
-    height: 200px;
+    height: 150px;
     width: 100%;
+    position: relative;
 }
 
 .wrapper {
@@ -110,16 +111,18 @@ header {
 
 .logo {
     /*text-align: left;*/
+    height: 100%;
     display: inline-block;
 }
 
 .global-nav {
     /*text-align: right;*/
-    position: relative;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    display: inline-block;
-    float: right;
+    /*float: right;*/
+    /*display: inline-block;*/
+    right: 0;
 }
 
 .global-nav a {
@@ -166,20 +169,195 @@ footer {
     vertical-align: top;
     display: inline-block;
     text-align: left;
-    width: 70%;
+    /*width: 70%;*/
 }
 
 .contact {
     padding: 0 10px 0;
     display: inline-block;
     vertical-align: top;
-    width: 30%;
+    /*width: 30%;*/
 }
 
 .blurb {
+    /*padding: 0 5px;*/
     min-height: 200px;
 }
 
 .contact-details {
     display: block;
 }
+
+.logo-image {
+    width: auto;
+    height: 100%;
+    display: inline-block;
+}
+
+.logo-image-white {
+    width: auto;
+    height: 100%;
+    display: none;
+}
+
+.content {
+    padding-top: 50px;
+}
+
+.mobile-nav {
+    background-color: black;
+    height: calc(100vh - 100px);
+}
+
+.mobile-nav a {
+    display: block;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+.mobile-nav a:hover {
+    border-bottom: 2px solid black;
+}
+
+.mobile-nav a:active {
+    border-bottom: 2px solid black;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    mobile-nav {
+        display: none;
+    }
+    header .burger {
+        display: none;
+    }
+    .wrapper {
+        max-width: 90%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .wrapper {
+        max-width: 80%;
+    }
+    .col-md-7 {
+        width: 58.33%;
+    }
+    .col-md-5 {
+        width: 41.66%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .wrapper {
+        max-width: 70%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    header {
+        position: fixed;
+        top: 0;
+        background-color: white;
+        height: 100px;
+        padding: 5px 0;
+        z-index: 9999;
+    }
+    .logo {
+        padding-left: 10px;
+    }
+    .global-nav {
+        display: none;
+    }
+    .wrapper {
+        max-width: 100%;
+        margin: 0;
+        z-index: -1;
+    }
+    .col-sm-12 {
+        width: 100%;
+    }
+    label {
+        padding: 5px;
+    }
+    .blog-footer {
+        height: 100%;
+        text-align: center;
+    }
+    .links {
+        display: block;
+        float: none;
+        top: 0;
+        transform: none;
+    }
+    .copyright {
+        height: 100%;
+        clear: both;
+        transform: none;
+    }
+    #wdi_feed_0 .wdi_feed_container .wdi_feed_item {
+        width: 50%;
+    }
+    .mobile-nav .links {
+        text-align: center;
+    }
+    .mobile-nav .links a {
+        display: inline-block;
+    }
+    .burger {
+        float: right;
+        margin: 15px 15px 0 0;
+        display: inline-block;
+        cursor: pointer;
+    }
+}
+
+    .burger::-moz-focus-inner {
+       border: 0;
+       padding: 0;
+   }
+
+    .burger:before {
+     width: 100%;
+    }
+
+    .burger:after {
+     width: 100%;
+    }
+
+    .burger-check {
+        display: none;
+    }
+
+.mobile-nav {
+    overflow: hidden;
+    display: none;
+    font-size: 150%;
+}
+
+.burger-check:checked ~ .mobile-nav {
+    display: block;
+    }
+
+.fa-icon-thin:before {
+    content: '\00d7';
+}
+
+#wdi_feed_0 .wdi_feed_container {
+    padding: 0 5px;
+}
+#wdi_feed_0 .wdi_feed_container .wdi_load_more_text {
+    color: black;
+}
+#wdi_feed_0 .wdi_feed_container .wdi_load_more_wrap {
+    border-color: black;
+}
+.instagram {
+    padding: 0 10px 0;
+    margin: 10px 0;
+}
+
+
+
