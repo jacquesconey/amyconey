@@ -11,6 +11,7 @@
 	<title>Blog Template for Bootstrap</title>
     <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"> -->
 	<link href="<?php bloginfo( 'template_directory' );?>/style.css" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -30,7 +31,7 @@
                 hamburger.style.color = 'white';
                 hamburger.className='burger fa fa-icon-thin fa-2x';
             } else {
-                header.style.backgroundColor = 'white';
+                header.style.backgroundColor = 'rgba(255,255,255,.9)';
                 logo.style.display ='inline-block';
                 logoWhite.style.display ='none';
                 hamburger.style.color = 'black';

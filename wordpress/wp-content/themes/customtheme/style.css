@@ -205,14 +205,14 @@ footer {
 }
 
 .mobile-nav {
-    background-color: black;
+    background-color: rgb(170, 170, 177);
     height: calc(100vh - 100px);
 }
 
 .mobile-nav a {
     display: block;
     text-align: center;
-    color: white;
+    color: #f1f1f7;
     padding: 10px;
 }
 
@@ -229,6 +229,9 @@ footer {
 @media only screen and (min-width: 768px) {
     mobile-nav {
         display: none;
+    }
+    header {
+        background-color: white;
     }
     header .burger {
         display: none;
@@ -260,7 +263,7 @@ footer {
     header {
         position: fixed;
         top: 0;
-        background-color: white;
+        background-color: rgba(255,255,255,.9);
         height: 100px;
         padding: 5px 0;
         z-index: 9999;
@@ -285,6 +288,7 @@ footer {
     .blog-footer {
         height: 100%;
         text-align: center;
+        padding: 0 10px 0;
     }
     .links {
         display: block;
@@ -299,6 +303,9 @@ footer {
     }
     #wdi_feed_0 .wdi_feed_container .wdi_feed_item {
         width: 50%;
+    }
+    .envira-gallery-wrap .envira-gallery-description {
+        padding: 0 10px 0;
     }
     .mobile-nav .links {
         text-align: center;
@@ -357,6 +364,10 @@ footer {
 .instagram {
     padding: 0 10px 0;
     margin: 10px 0;
+}
+
+.collection-title {
+    padding: 0 10px 0;
 }
 
 

@@ -3,6 +3,7 @@ jQuery(document).ready(function ()
 {
 
 });
+
 function wdi_responsive()
 {
 };
@@ -113,7 +114,7 @@ wdi_responsive.columnControl = function (currentFeed, load, customWidth)
           for (var i = 0; i < colNum; i++) {
             newCols += '<div class="wdi_masonry_column" wdi_mas_col="' + i + '"></div>';
           }
-          newCols += '<div class="clear">';
+          newCols += '<div class="wdi_clear">';
           wrapper.html(newCols);
 
           //resetting index variables
@@ -219,6 +220,8 @@ wdi_responsive.showCaption = function (caption, currentFeedCounter)
 
   //find maximum height in row
   var maxHeight = 0;
+
+
   for (var i = 0; i < indexes.length; i++) {
     var currentItem = jQuery('#wdi_feed_' + currentFeed.feed_row.wdi_feed_counter + ' .wdi_feed_wrapper [' + indexType + '=' + indexes[i] + ']');
     currentItem.addClass('wdi_row_affected');

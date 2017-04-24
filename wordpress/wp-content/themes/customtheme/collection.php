@@ -2,19 +2,15 @@
 
 <?php get_header(); ?>
 
+<?php $slug = basename(get_permalink()); ?>
 
+    <div class="content">
 
-    <?php echo do_shortcode('[envira-gallery slug="collection-1"]'); ?>
+        <h1 class="collection-title"><?php
+            echo ucwords(str_replace("-", " ", $slug));
+         ?></h1>
 
-	<div class="row">
-
-		<div class="col-sm-8 blog-main">
-
-			<!-- <?php //get_template_part( 'content', get_post_format() ); ?> -->
-
-		</div> <!-- /.blog-main -->
-
-		<!-- <?php //get_sidebar(); ?> -->
+        <?php echo do_shortcode('[envira-gallery slug="'.$slug.'"]'); ?>
 
 	</div> <!-- /.row -->
 

@@ -91,7 +91,7 @@ class WDIModelFeeds_wdi {
     'display_header'=>  '0',
     'number_of_photos'=>  '20',
     'load_more_number' => '4',
-    'pagination_per_page_number'=>'10',
+    'pagination_per_page_number'=>'12',
     'pagination_preload_number'=>'10',
     'image_browser_preload_number'=>'10',
     'image_browser_load_number'=>'10',

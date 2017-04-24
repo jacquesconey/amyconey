@@ -26,10 +26,12 @@ public function display(){
 	$wdi_feed_counter = $this->model->wdi_feed_counter;
 	$this->generate_feed_styles($feed_row);
 	$style = $this->model->theme_row;
+
+	$wdi_data_ajax = defined('DOING_AJAX') && DOING_AJAX ? 'data-wdi_ajax=1' : '';
 	
 	?>
 
-	<div id="wdi_feed_<?php echo $wdi_feed_counter?>" class="wdi_feed_main_container">
+	<div id="wdi_feed_<?php echo $wdi_feed_counter?>" class="wdi_feed_main_container" <?php echo $wdi_data_ajax; ?> >
 		<div id="wdi_spider_popup_loading_<?php echo $wdi_feed_counter?>"  class="wdi_spider_popup_loading"></div>
 		<div id="wdi_spider_popup_overlay_<?php echo $wdi_feed_counter?>" class="wdi_spider_popup_overlay" onclick="wdi_spider_destroypopup(1000)"></div>
 		<div class="wdi_feed_container">
@@ -39,24 +41,23 @@ public function display(){
 			</div>
 			<?php 
 				if($feed_row['feed_display_view']==='pagination' && $style['pagination_position_vert']==='top'){
-					?><div id="wdi_pagination" class="wdi_pagination"><div class="wdi_pagination_container"><i id="wdi_first_page" title="<?php echo __('First Page',"wdi")?>" class="fa fa-step-backward wdi_pagination_ctrl wdi_disabled"></i><i id="wdi_prev" title="<?php echo __('Previous Page',"wdi")?>" class="fa fa-arrow-left wdi_pagination_ctrl"></i><i id="wdi_current_page" class="wdi_pagination_ctrl" style="font-style:normal">1</i><i id="wdi_next" title="<?php echo __('Next Page',"wdi")?>" class="fa fa-arrow-right wdi_pagination_ctrl"></i> <i id="wdi_last_page" title="<?php echo __('Last Page',"wdi")?>" class="fa fa-step-forward wdi_pagination_ctrl wdi_disabled"></i></div></div> <?php
+					?><div id="wdi_pagination" class="wdi_pagination"><div class="wdi_pagination_container"><i id="wdi_first_page" title="<?php echo __('First Page',"wd-instagram-feed")?>" class="fa fa-step-backward wdi_pagination_ctrl wdi_disabled"></i><i id="wdi_prev" title="<?php echo __('Previous Page',"wd-instagram-feed")?>" class="fa fa-arrow-left wdi_pagination_ctrl"></i><i id="wdi_current_page" class="wdi_pagination_ctrl" style="font-style:normal">1</i><i id="wdi_next" title="<?php echo __('Next Page',"wd-instagram-feed")?>" class="fa fa-arrow-right wdi_pagination_ctrl"></i> <i id="wdi_last_page" title="<?php echo __('Last Page',"wd-instagram-feed")?>" class="fa fa-step-forward wdi_pagination_ctrl wdi_disabled"></i></div></div> <?php
 				}
 			?>
 			<div class="wdi_feed_wrapper <?php echo 'wdi_col_'.$feed_row['number_of_columns']?>" wdi-res='<?php echo 'wdi_col_'.$feed_row['number_of_columns']?>'></div>
-			<div class="clear"></div>
+			<div class="wdi_clear"></div>
 		
 		<?php switch($feed_row['feed_display_view']){
 			case 'load_more_btn':{
 				?>
-				<style>.wdi_hidden{display: none;}</style>
-				<div class="wdi_load_more wdi_hidden"><div class="wdi_load_more_container"><div class="wdi_load_more_wrap"><div class="wdi_load_more_wrap_inner"><div class="wdi_load_more_text"><?php echo __('Load More',"wdi");?></div></div></div></div></div>
+				<div class="wdi_load_more wdi_hidden"><div class="wdi_load_more_container"><div class="wdi_load_more_wrap"><div class="wdi_load_more_wrap_inner"><div class="wdi_load_more_text"><?php echo __('Load More',"wd-instagram-feed");?></div></div></div></div></div>
 				<div class="wdi_spinner "><div class="wdi_spinner_container"><div class="wdi_spinner_wrap"><div class="wdi_spinner_wrap_inner"><i class="wdi_load_more_spinner fa fa-spinner"></i></div></div></div></div>	
 				<?php
 				break;
 			}
 			case 'pagination':{
 				if($style['pagination_position_vert']==='bottom'){
-					?><div id="wdi_pagination" class="wdi_pagination"><div class="wdi_pagination_container"><i id="wdi_first_page" title="<?php echo __('First Page',"wdi")?>" class="fa fa-step-backward wdi_disabled wdi_pagination_ctrl"></i><i id="wdi_prev" title="<?php echo __('Previous Page',"wdi")?>" class="fa fa-arrow-left wdi_pagination_ctrl"></i><i id="wdi_current_page" class="wdi_pagination_ctrl" style="font-style:normal">1</i><i id="wdi_next" title="<?php echo __('Next Page',"wdi")?>" class="fa fa-arrow-right wdi_pagination_ctrl"></i> <i id="wdi_last_page" title="<?php echo __('Last Page',"wdi")?>" class="fa fa-step-forward wdi_pagination_ctrl wdi_disabled"></i></div></div> <?php
+					?><div id="wdi_pagination" class="wdi_pagination"><div class="wdi_pagination_container"><i id="wdi_first_page" title="<?php echo __('First Page',"wd-instagram-feed")?>" class="fa fa-step-backward wdi_disabled wdi_pagination_ctrl"></i><i id="wdi_prev" title="<?php echo __('Previous Page',"wd-instagram-feed")?>" class="fa fa-arrow-left wdi_pagination_ctrl"></i><i id="wdi_current_page" class="wdi_pagination_ctrl" style="font-style:normal">1</i><i id="wdi_next" title="<?php echo __('Next Page',"wd-instagram-feed")?>" class="fa fa-arrow-right wdi_pagination_ctrl"></i> <i id="wdi_last_page" title="<?php echo __('Last Page',"wd-instagram-feed")?>" class="fa fa-step-forward wdi_pagination_ctrl wdi_disabled"></i></div></div> <?php
 				}
 				
 				break;
@@ -64,8 +65,9 @@ public function display(){
 			case 'infinite_scroll':{
 				?><div id="wdi_infinite_scroll" class="wdi_infinite_scroll"></div> <?php
 			}
-			}?>
-
+			}
+		wdi_feed_frontend_messages();
+		?>
 		</div>
 	</div>
 	<?php
@@ -319,14 +321,25 @@ public function generate_feed_styles($feed_row){
 		height: 100%;
 	}
 	#wdi_feed_<?php echo $wdi_feed_counter?> .wdi_img{
-		width: 100%;
 		display: block;
 		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		margin: auto;
+		top: 50%;
+		left: 50%;
+		max-width:none;
+		-webkit-transform: translateX(-50%) translateY(-50%);
+		-moz-transform: translateX(-50%) translateY(-50%);
+		-ms-transform: translateX(-50%) translateY(-50%);
+		-o-transform: translateX(-50%) translateY(-50%);
+		transform: translateX(-50%) translateY(-50%);
+	}
+	#wdi_feed_<?php echo $wdi_feed_counter?> .wdi_shape_portrait .wdi_img,
+	#wdi_feed_<?php echo $wdi_feed_counter?> .wdi_shape_square .wdi_img{
+		width: 100%;
+		height:auto;
+	}
+	#wdi_feed_<?php echo $wdi_feed_counter?> .wdi_shape_landscape .wdi_img{
+		height: 100%;
+		width:auto;
 	}
 	#wdi_feed_<?php echo $wdi_feed_counter?> .wdi_feed_item{
 		width: <?php echo $colNum.'%'?>;/*thumbnail_size*/
@@ -400,7 +413,11 @@ public function generate_feed_styles($feed_row){
 		vertical-align: middle;
 		color: <?php echo $style['load_more_text_color']?>;/*load_more_text_color*/
 		font-size: <?php echo intval($style['load_more_text_font_size'])*1.3?>px;/*load_more_text_font_size*/
-		animation: wdi_rotate 1.5s infinite;
+
+		-webkit-animation: wdi_rotate 1.5s infinite;
+		-moz-animation:wdi_rotate 1.5s infinite;
+		-o-animation:wdi_rotate 1.5s infinite;
+		animation:wdi_rotate 1.5s infinite;
 	}
 
 
