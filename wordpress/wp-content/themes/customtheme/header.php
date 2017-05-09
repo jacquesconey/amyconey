@@ -54,17 +54,17 @@
                 </a>
              </div>
             <nav class="global-nav">
-                <a class="global-nav-item" href="/artwork/">artwork</a>
+                <a class="global-nav-item" href="/">artwork</a>
 <!--                <a class="global-nav-item" href="/photography/">photography</a> -->
-                <a class="global-nav-item" href="/blog/">blog</a>
+                <a class="global-nav-item" href="https://amyconeyart.wordpress.com/">blog</a>
                 <a class="global-nav-item" href="/shop/">shop</a>
                 <a class="global-nav-item" href="/contact/">about/contact</a>
             </nav>
             <input class="burger-check" id="burger-check" onclick='isChecked();' type="checkbox"><label for="burger-check" class="burger fa fa-bars fa-3x" aria-hidden="true"></label>
             <nav class="mobile-nav">
-                <a class="mobile-nav-item" href="/artwork/">artwork</a>
+                <a class="mobile-nav-item" href="/">artwork</a>
 <!--               <a class="mobile-nav-item" href="/photography/">photography</a> -->
-                <a class="mobile-nav-item" href="/blog/">blog</a>
+                <a class="mobile-nav-item" href="https://amyconeyart.wordpress.com/">blog</a>
                 <a class="mobile-nav-item" href="/shop/">shop</a>
                 <a class="mobile-nav-item" href="/contact/">about/contact</a>
                 <div class="links">

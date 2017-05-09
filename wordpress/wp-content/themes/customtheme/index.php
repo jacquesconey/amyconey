@@ -1,14 +1,13 @@
 <?php /* Template Name: index */ ?>
 
-    <?php //echo do_shortcode('[envira-gallery slug="collection-1"]'); ?>
+<?php get_header(); ?>
 
-    			<?php
-    			while ( have_posts() )
-                {
-                    the_post();
-                    ?>
-                    <?php
-                    the_content();
-                }
-                ?>
+<?php $slug = basename(get_permalink()); ?>
 
+    <div class="content">
+
+        <?php echo do_shortcode('[envira-gallery slug="artwork"]'); ?>
+
+	</div> <!-- /.row -->
+
+<?php get_footer(); ?>

@@ -29,6 +29,7 @@ time, mark, audio, video {
     border: 0;
     font-size: 100%;
     font: inherit;
+    line-height: 1.4 !important;
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -37,7 +38,6 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 body {
-    line-height: 1.4;
     background-color: rgb(241,241,247);
     color: rgb(170, 170, 177);
 }
@@ -77,11 +77,19 @@ body {
     font-size: 16px;
 }
 
-h1 {
-    font-size: 200%;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
+/*h1 {*/
+    /*font-size: 2em;*/
+    /*font-weight: bold;*/
+    /*margin-bottom: 20px;*/
+/*}*/
+
+h1 {font-size: 2em; margin: .67em 0;}
+h2 {font-size: 1.5em; margin: .83em 0;}
+h3 {font-size: 1.17em; margin: 1em 0;}
+h4 {font-size: 1em; margin: 1.33em 0;}
+h5 {font-size: .83em; line-height: 1.17em; margin: 1.67em 0;}
+h6 {font-size: .67em; margin: 2.33em 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: bolder;}
 
 a {
     text-decoration: none;
@@ -92,7 +100,7 @@ strong {
     font-weight: bold;
 }
 
-p {
+p, ul {
     margin-bottom: 10px;
 }
 
@@ -104,9 +112,15 @@ header {
     height: 150px;
     width: 100%;
     position: relative;
+    text-align: left;
 }
 
-.wrapper {
+/*.wrapper {*/
+    /*max-width: 70%;*/
+    /*margin: auto;*/
+/*}*/
+
+.content, footer, header {
     max-width: 70%;
     margin: auto;
 }
@@ -170,7 +184,6 @@ footer {
     padding: 0 10px 0;
     vertical-align: top;
     display: inline-block;
-    text-align: left;
     /*width: 70%;*/
 }
 
@@ -238,13 +251,28 @@ footer {
     header .burger {
         display: none;
     }
-    .wrapper {
+    .content, footer, header {
         max-width: 90%;
+    }
+    .envira-gallery-wrap .envira-gallery-description {
+        padding: 0 20% 0;
+        margin-bottom: 50px;
+    }
+    .collection-title {
+        padding: 0 20% 0;
+        text-align: left;
+    }
+    .margin-top-none {
+        margin-top: 0 !important;
+    }
+    .next, .previous {
+        height: 200px;
+        line-height: 200px !important;
     }
 }
 
 @media only screen and (min-width: 992px) {
-    .wrapper {
+    .content, footer, header {
         max-width: 80%;
     }
     .col-md-7 {
@@ -253,10 +281,13 @@ footer {
     .col-md-5 {
         width: 41.66%;
     }
+    .col-md-6 {
+        width: 50%;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
-    .wrapper {
+    .content, footer, header {
         max-width: 70%;
     }
 }
@@ -276,13 +307,17 @@ footer {
     .global-nav {
         display: none;
     }
-    .wrapper {
+    .content {
         max-width: 100%;
         margin: 0;
         z-index: -1;
     }
     .col-sm-12 {
         width: 100%;
+    }
+    .next, .previous {
+        height: 100px;
+        line-height: 100px !important;
     }
     label {
         padding: 5px;
@@ -308,6 +343,7 @@ footer {
     }
     .envira-gallery-wrap .envira-gallery-description {
         padding: 0 10px 0;
+        margin-bottom: 10px;
     }
     .mobile-nav .links {
         text-align: center;
@@ -320,6 +356,15 @@ footer {
         margin: 15px 15px 0 0;
         display: inline-block;
         cursor: pointer;
+    }
+    .collection-title {
+        text-align: center;
+    }
+    body {
+        text-align: center
+    }
+    .content, footer, header {
+        max-width: 100%;
     }
 }
 
@@ -354,27 +399,102 @@ footer {
     content: '\00d7';
 }
 
+#wdi_feed_0 .wdi_feed_wrapper {
+    background-color: rgb(241,241,247) !important;
+}
+
 #wdi_feed_0 .wdi_feed_container {
     padding: 0 5px;
+    background-color: rgb(241,241,247) !important;
+    border-color: rgb(241,241,247) !important;
 }
+
+#wdi_feed_0 .wdi_photo_wrap_inner {
+    background-color: rgb(241,241,247) !important;
+    border-color: rgb(241,241,247) !important;
+}
+
+#wdi_feed_0 .wdi_load_more {
+    background-color: rgb(241,241,247) !important;
+}
+
+#wdi_feed_0 .wdi_load_more_container {
+    background-color: rgb(241,241,247) !important;
+}
+
+/*#wdi_feed_0 .wdi_load_more_text:hover {*/
+    /*background-color: rgb(170, 170, 177) !important;*/
+    /*color: rgb(241,241,247) !important;*/
+
+/*}*/
+
+/*wdi_feed_0 .wdi_load_more_wrap {*/
+    /*background-color: rgb(241,241,247) !important;*/
+/*}*/
+
 #wdi_feed_0 .wdi_feed_container .wdi_load_more_text {
     color: rgb(170, 170, 177);
 }
 #wdi_feed_0 .wdi_feed_container .wdi_load_more_wrap {
     border-color: rgb(170, 170, 177);
+    background-color: rgb(241,241,247) !important;
 }
+
+#wdi_feed_0 .wdi_feed_container .wdi_load_more_wrap:hover .wdi_load_more_text {
+    border-color: rgb(241,241,247) !important;
+    color: rgb(241,241,247) !important;
+}
+
+#wdi_feed_0 .wdi_feed_container .wdi_load_more_wrap:hover {
+    border-color: rgb(241,241,247) !important;
+    color: rgb(241,241,247) !important;
+    background-color: rgb(170, 170, 177) !important;
+}
+
+#wdi_feed_0 .wdi_spinner{
+    background-color: rgb(241,241,247) !important;
+}
+#wdi_feed_0 .wdi_spinner_wrap {
+    border-color: rgb(170, 170, 177) !important;
+    background-color: rgb(241,241,247) !important;
+}
+
+#wdi_feed_0 .wdi_load_more_spinner {
+    border-color: rgb(170, 170, 177);
+    color: rgb(170, 170, 177) !important;
+}
+
 .instagram {
     padding: 0 10px 0;
     margin: 10px 0;
 }
 
-.collection-title {
-    padding: 0 10px 0;
-}
-
 .envira-gallery-wrap .envira-gallery-public.envira-gallery-css-animations .envira-gallery-item img {
     width: 100% !important;
     height: auto !important;
+}
+
+.block {
+    margin-bottom: 10px;
+}
+
+.pagination {
+    left: 0;
+    right: 0;
+}
+
+.next {
+    background-color: rgba(170, 170, 177, .5);
+}
+
+.previous {
+    background-color: rgba(170, 170, 177, .6);
+}
+
+.next, .previous {
+    display: inline-block;
+    color: rgb(241,241,247);
+    text-align: center;
 }
 
 
