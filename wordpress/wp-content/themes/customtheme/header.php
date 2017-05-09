@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
+	<meta name="p:domain_verify" content="3daa014402324bc483ebc76dafa704f1"/>
 
 	<title>Blog Template for Bootstrap</title>
     <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"> -->
@@ -25,16 +26,16 @@
         var logoWhite = document.getElementsByClassName('logo-image-white')[0];
         var hamburger =  document.getElementsByClassName('burger')[0];
             if (document.getElementById('burger-check').checked) {
-                header.style.backgroundColor = 'black';
+                header.style.backgroundColor = 'rgb(170, 170, 177)';
                 logo.style.display ='none';
                 logoWhite.style.display ='inline-block';
-                hamburger.style.color = 'white';
+                hamburger.style.color = 'rgb(241,241,247)';
                 hamburger.className='burger fa fa-icon-thin fa-2x';
             } else {
-                header.style.backgroundColor = 'rgba(255,255,255,.9)';
+                header.style.backgroundColor = 'rgba(241,241,247, .9)';
                 logo.style.display ='inline-block';
                 logoWhite.style.display ='none';
-                hamburger.style.color = 'black';
+                hamburger.style.color = 'rgb(170, 170, 177)';
                 hamburger.className = 'burger fa fa-bars fa-3x';
             }
         }
@@ -54,7 +55,7 @@
              </div>
             <nav class="global-nav">
                 <a class="global-nav-item" href="/artwork/">artwork</a>
-                <a class="global-nav-item" href="/photography/">photography</a>
+<!--                <a class="global-nav-item" href="/photography/">photography</a> -->
                 <a class="global-nav-item" href="/blog/">blog</a>
                 <a class="global-nav-item" href="/shop/">shop</a>
                 <a class="global-nav-item" href="/contact/">about/contact</a>
@@ -62,7 +63,7 @@
             <input class="burger-check" id="burger-check" onclick='isChecked();' type="checkbox"><label for="burger-check" class="burger fa fa-bars fa-3x" aria-hidden="true"></label>
             <nav class="mobile-nav">
                 <a class="mobile-nav-item" href="/artwork/">artwork</a>
-                <a class="mobile-nav-item" href="/photography/">photography</a>
+<!--               <a class="mobile-nav-item" href="/photography/">photography</a> -->
                 <a class="mobile-nav-item" href="/blog/">blog</a>
                 <a class="mobile-nav-item" href="/shop/">shop</a>
                 <a class="mobile-nav-item" href="/contact/">about/contact</a>
