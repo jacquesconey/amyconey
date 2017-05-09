@@ -7,6 +7,9 @@
         		        <a href="https://www.instagram.com/amyconeyart/">
         		            <i class="fa fa-instagram" aria-hidden="true"></i>
         		        </a>
+                        <a href="https://twitter.com/amyconeyart/">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
         		    </div>
 		    <p class="copyright">All of the images on the website are subject to Copyright &copy; 2017 Amy Coney</p>
         </footer>

@@ -74,6 +74,9 @@
                     <a href="https://www.instagram.com/amyconeyart/">
                         <i class="fa fa-2x fa-instagram" aria-hidden="true"></i>
                     </a>
+                    <a href="https://twitter.com/amyconeyart/">
+                        <i class="fa fa-2x fa-twitter" aria-hidden="true"></i>
+                    </a>
                 </div>
             </nav>
         </header>
