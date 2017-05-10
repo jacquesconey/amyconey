@@ -14,7 +14,7 @@
                 <div class="block">
                     <h3>get in touch</h3>
                     <span class="contact-details"><strong>call: </strong>07976896267</span>
-                    <span class="contact-details"><strong>email: </strong>amydconey@gmail.com</span>
+                    <span class="contact-details"><strong>email: </strong>me@amyconey.com</span>
                 </div>
             </div><div class="contact col-md-5 col-sm-12">
                 <div class="block">
